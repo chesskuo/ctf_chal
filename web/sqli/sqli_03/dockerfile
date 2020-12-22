@@ -1,0 +1,8 @@
+FROM php:7.2-apache
+
+LABEL author="Chess Kuo <owo@chesskuo.tw>" \
+      version="1.0"
+
+RUN docker-php-ext-install mysqli
+
+COPY src/ /var/www/html/

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS or JS?</title>
+</head>
+<body style="text-align: center;">
+	<h1 style="font-family: consolas">Is JS G00000000D?</h1>
+	<img src="https://i.imgur.com/uS96mpW.jpg" width="60%">
+</body>
+<script type="text/javascript">
+	// you must decrypt the flag first and then print it out.
+	var flag = "";
+
+	function decrypt(e = [664335,660450,668220,667443,654234,699300,697746,641025,694638,677544,686868,689199,641025,696192,677544,684537,641025,696192,677544,693861,641025,677544,694638,693084,643356,677544,661227,644133,695415,644133,693084,680652,692307,641802,690753,693861,700854,603729])
+	{
+		var key = ((777 + 777 * 777 - 777 / 777) % 777) & 777 | 777;
+		for(var i=0; i<e.length; i++) flag += String.fromCharCode(e[i] / key - key);
+	}
+</script>
+</html>

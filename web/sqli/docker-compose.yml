@@ -1,0 +1,57 @@
+version: "3.7"
+
+services:
+  db:
+    image: mariadb
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=D0ntT0uchM3
+    volumes:
+      - "./labs.sql:/docker-entrypoint-initdb.d/labs.sql"
+
+  # pma:
+  #   image: phpmyadmin/phpmyadmin
+  #   ports:
+  #     - "8900:80"
+  #   links:
+  #     - db
+
+  sqli_01:
+    build: sqli_01/.
+    ports:
+      - "8901:80"
+    restart: always
+    depends_on:
+      - db
+    links:
+      - db
+
+  sqli_02:
+    build: sqli_02/.
+    ports:
+      - "8902:80"
+    restart: always
+    depends_on:
+      - db
+    links:
+      - db
+
+  sqli_03:
+    build: sqli_03/.
+    ports:
+      - "8903:80"
+    restart: always
+    depends_on:
+      - db
+    links:
+      - db
+
+  sqli_04:
+    build: sqli_04/.
+    ports:
+      - "8904:80"
+    restart: always
+    depends_on:
+      - db
+    links:
+      - db

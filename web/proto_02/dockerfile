@@ -1,0 +1,12 @@
+FROM php:7.2-apache
+
+LABEL author="Chess Kuo <owo@chesskuo.tw>" \
+      version="1.0"
+
+COPY src/ /var/www/html
+COPY y0u_c4nn0t_f1nd_m3.php /tmp/y0u_c4nn0t_f1nd_m3.php
+
+RUN chown -R www-data:www-data /var/www/html & \
+	usermod -G www-data root
+
+EXPOSE 80

@@ -1,0 +1,50 @@
+version: "3.7"
+
+services:
+  1==1:
+    build: 1==1/.
+    ports:
+      - "8801:80"
+    restart: always
+
+  developer_tools:
+    build: developer_tools/.
+    ports:
+      - "8802:80"
+    restart: always
+
+  js_or_js:
+    build: js_or_js/.
+    ports:
+      - "8803:80"
+    restart: always
+
+  md5_01:
+    build: md5_01/.
+    ports:
+      - "8804:80"
+    restart: always
+
+  md5_02:
+    build: md5_02/.
+    ports:
+      - "8805:80"
+    restart: always
+
+  proto_01:
+    build: proto_01/.
+    ports:
+      - "8806:80"
+    restart: always
+
+  proto_02:
+    build: proto_02/.
+    ports:
+      - "8807:80"
+    restart: always
+
+  web3bro:
+    build: proto_02/.
+    ports:
+      - "8808:80"
+    restart: always
